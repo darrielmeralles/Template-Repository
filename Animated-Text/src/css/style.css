@@ -1,0 +1,182 @@
+body,
+html {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font: var(--defaultFont);
+}
+
+.widget-abc123 {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+/* Start CSS Here */
+.widgetName-Main-Container,
+.widgetName-Main-Container a,
+.widgetName-Main-Container div,
+.widgetName-Main-Container img,
+.widgetName-Main-Container label,
+.widgetName-Main-Container input,
+.widgetName-Main-Container select {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	/* line-height: 1.5em; */
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+/*Loader CSS*/
+.widget-Loader-Container {
+	/* position: absolute; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	/* background-color: #c8c8c880; */
+	z-index: 1;
+}
+
+.widget-Loader-Container svg {
+	max-width: 200px;
+	animation: 2s linear infinite svg--animation;
+}
+
+.widget-Loader-Container svg circle.one {
+	display: block;
+	fill: transparent;
+	stroke: #c3c3c3;
+	stroke-width: 3px;
+}
+
+.widget-Loader-Container svg circle.two {
+	animation: 3s linear infinite circle-animation;
+	display: block;
+	fill: transparent;
+	/* stroke: rgb(255, 164, 0); */
+	stroke: rgb(var(--primaryColor));
+	stroke-linecap: round;
+	stroke-dasharray: 253;
+	stroke-dashoffset: 250;
+	stroke-width: 3px;
+	transform-origin: 50% 50%;
+}
+
+@keyframes circle-animation {
+	0% {
+		stroke-dashoffset: 250;
+		transform: rotate(0deg);
+	}
+
+	50% {
+		stroke-dashoffset: 75;
+		transform: rotate(45deg);
+	}
+
+	100% {
+		stroke-dashoffset: 250;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes svg--animation {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(360deg)
+	}
+}
+/*End Loader CSS*/
+
+/*Error Handling*/
+.widget-noCollection-Title {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	font-weight: 600;
+	color: rgb(var(--warningColor));
+}
+
+.widget-noCollection-Subtext {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* color: rgb(177, 177, 177); */
+	color: rgb(var(--secondaryColor));
+}
+/*End Error Handling*/
+
+/* - - - - - -  ADD CSS HERE - - - - - - */
+
+/* desktop-tablet.css */
+@media (min-width: 875px) and (max-width: 1280px) {
+
+}
+
+/* mobile.css */
+@media (max-width: 767px) {
+
+}
+
+/* - - - - - -  END CSS HERE - - - - - - */
+
+.container {
+	/* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://source.unsplash.com/1280x720/?girl); */
+	background-position: center;
+	  background-size: cover;
+	height: 650px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff !important; 
+  }
+  .container p {
+	font-size: 3rem;
+	padding: 0.5rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	text-align: left;
+	overflow: hidden;
+  }
+  .container p span.typed-text {
+	font-weight: normal;
+	color: #dd7732;
+  }
+  .container p span.cursor {
+	display: inline-block;
+	background-color: #ccc;
+	margin-left: 0.1rem;
+	width: 3px;
+	animation: blink 1s infinite;
+  }
+  .container p span.cursor.typing {
+	animation: none;
+  }
+  @keyframes blink {
+	0%  { background-color: #ccc; }
+	49% { background-color: #ccc; }
+	50% { background-color: transparent; }
+	99% { background-color: transparent; }
+	100%  { background-color: #ccc; }
+  }
